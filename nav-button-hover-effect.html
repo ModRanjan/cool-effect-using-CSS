@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nav-animmation effect</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-image: linear-gradient(to right bottom,
+            #8FD9A8,
+            #80ED99,
+            #57CC99);
+            height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        nav{
+            background-image: linear-gradient(to right bottom,
+            #8FD9A8,
+            #80ED99,
+            #8FD9A8);
+            position: sticky;
+            top: 0;
+            height: 10vh;
+        }
+        ul{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            gap: 50px;
+        }
+        ul li,
+        ul li a:link{
+            color: rgba(31, 158, 19, 0.871);
+            cursor: pointer;
+            font-size: 20px;
+            font-weight: 400;
+            list-style: none;
+            text-decoration: none;
+            padding: 8px 16px;
+            position: relative;
+        }
+        ul li::before{
+            border-left: 4px solid #2EC1AC;
+            border-top: 4px solid #2EC1AC;
+            box-sizing: border-box;
+            content: "";
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            transition: all 0.4s;
+            transform-origin: left;
+        }
+        ul li::after{
+            border-right: 4px solid #2EC1AC;
+            border-bottom: 4px solid #2EC1AC;
+            box-sizing: border-box;
+            content: "";
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            transition: all 0.1s;
+            transform-origin: left;
+        }
+        ul li:hover:before,
+        ul li:hover:after{
+            content: "";
+            width: 8%;
+            height: 25%;
+            transform: rotate(360deg);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="http://">Home</a></li>
+            <li><a href="http://">About</a></li>
+            <li><a href="http://">Services</a></li>
+            <li><a href="http://">Contact</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
