@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Hover Effect Animation using css</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-size: 10px;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card {
+            width: 230px;
+            height: 330px;
+            border: 2px solid #f7f7f7;
+            text-align: center;
+            color: rgb(42, 2, 107);
+            position: relative;
+            cursor: default;
+        }
+
+        .card:hover .card-body {
+            opacity: 1;
+            transform: translateY(70px);
+            transition: 0.3s;
+        }
+
+        .card-logo {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(42, 2, 107);
+            color: #fff;
+            transition: 0.3s;
+        }
+
+        .card-code {
+            font-size: 4rem;
+            font-weight: 700;
+        }
+
+        .card:hover .card-logo {
+            width: 100px;
+            background-color: #fff;
+            height: 50px;
+            position: absolute;
+            top: 20px;
+            left: 110px;
+            transform: translate(-50%, 0);
+            transition: 0.10s;
+            border-radius: 50%;
+            border: 1px solid black;
+            color: rgb(42, 2, 107);
+        }
+
+        .card:hover .card-code {
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        .card-body {
+            padding: 10px;
+            transform: translateY(-100%);
+            opacity: -1;
+        }
+
+        .card-title {
+            font-size: 1.6rem;
+        }
+
+        .card-text {
+            font-size: 1.2rem;
+            margin: 16px 0;
+        }
+
+        .btn {
+            border: 1px solid rgb(42, 2, 107);
+            background-color: rgb(92, 11, 221);
+            padding: 1rem 2rem;
+            border-radius: 20px;
+            margin-top: 10px;
+            color: rgba(255, 255, 255, 0.822);
+            font-size: 1.1rem;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: rgb(70, 2, 179);
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <div class="card-logo">
+            <p class="card-code">007</p>
+        </div>
+        <div class="card-body">
+            <h3 class="card-title">i'm a card</h3>
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, quidem!</p>
+            <button class="btn">Read More</button>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-logo">
+            <p class="card-code">001</p>
+        </div>
+        <div class="card-body">
+            <h3 class="card-title">i'm a card</h3>
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, quidem!</p>
+            <button class="btn">Read More</button>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-logo">
+            <p class="card-code">002</p>
+        </div>
+        <div class="card-body">
+            <h3 class="card-title">i'm a card</h3>
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, quidem!</p>
+            <button class="btn">Read More</button>
+        </div>
+    </div>
+</body>
+
+</html>
