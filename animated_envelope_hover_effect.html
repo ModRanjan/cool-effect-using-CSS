@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Envelope like Hover Effect</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .btn-envelop,
+        .btn-for-anchor{
+            padding: 10px 20px;
+            font-size: 1.6rem;
+            text-decoration: none;
+            background-color: teal;
+            color: #fff;
+            border: 2px solid rgb(0, 0, 0);
+            position: relative;
+            transition: all 0.3s;
+        }
+        
+        .btn-envelop::before{
+            border: 2px solid rgb(0, 0, 0);
+            content: "i'm a button";
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            padding: 9px 18px;
+            font-size: 1.6rem;
+            text-decoration: none;
+            background-color: rgb(21, 89, 216);
+            color: #fff;
+            transform: rotateX(270deg);
+            transform-origin: top;
+            transition: all 0.5s;
+        }
+        
+        .btn-envelop::after{
+            border: 2px solid rgb(0, 0, 0);
+            content: "i'm a button";
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            padding: 9px 18px;
+            font-size: 1.6rem;
+            text-decoration: none;
+            background-color: rgb(216, 164, 21);
+            color: #fff;
+            transform: rotateX(-270deg);
+            transform-origin: bottom;
+            transition: all 0.9s;
+            transition-delay: .3s;
+
+        }
+        
+       
+        .btn-for-anchor::before{
+            content: "i'm a anchor";
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            padding: 10px 20px;
+            font-size: 1.6rem;
+            text-decoration: none;
+            background: rgb(21, 89, 216);
+            color: #fff;
+            transform: rotateX(270deg);
+            transform-origin: top;
+            transition: all 0.5s;
+        }
+        .btn-for-anchor::after{
+            content: "i'm a anchor";
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            padding: 10px 20px;
+            font-size: 1.6rem;
+            text-decoration: none;
+            background: rgb(216, 164, 21);
+            color: #fff;
+            transform: rotateX(-270deg);
+            transform-origin: bottom;
+            transition: all 0.5s;
+            transition-delay: .3s;
+        }
+        .btn-envelop:hover::before,
+        .btn-for-anchor:hover:before{
+            transform: rotateX(0deg);
+        }
+        
+        .btn-envelop:hover::after,
+        .btn-for-anchor:hover::after{
+            transform: rotateX(0deg);
+        }  
+    </style>
+</head>
+<body>
+    <button class="btn-envelop">i'm a button</button>
+    <a href="#" class="btn-for-anchor">i'm a anchor</a>
+</body>
+</html>
