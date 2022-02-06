@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Linear Gradient & Create Awesome Image Overlay</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .parent {
+            background-color: #e1e7ec;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            width: 100%;
+        }
+        .child{
+            height: 65vh;
+            width: 80vw;
+            background-image: linear-gradient(90deg, rgba(216, 222, 224, 0.4) 50%, transparent 50%), url(img/background-img.jpg);
+            background-position: top;
+            background-repeat: no-repeat;
+            background-size: cover;
+            box-shadow: 0 8px 20px -6px #000;
+            /*
+            background-color: black;
+            background-image: linear-gradient(90deg, rgba(40,51,55, 0.785) 40%, transparent 60%), url(img/background-img.jpg);
+            */
+        }
+        @media (max-width: 728px){
+            .child{
+                background-image: linear-gradient(to right ,rgba(191, 198, 201, 0.785),  rgba(191, 198, 201, 0.785)), url(img/background-img.jpg);
+            }
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="child">
+
+        </div>
+    </div>
+</body>
+
+</html>
